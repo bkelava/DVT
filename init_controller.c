@@ -86,6 +86,10 @@ InitControllerError read_init_values(char *file_name, uint32_t *freq, uint32_t *
 			else
 				return IC_READ_ERROR;
 		}
+		else if (!strcmp(key, KEY_CHANNEL_1) || !strcmp(key, KEY_CHANNEL_2) || !strcmp(key, KEY_CHANNEL_3) || !strcmp(key, KEY_CHANNEL_4) || !strcmp(key, KEY_CHANNEL_5))
+		{
+			printf("NO USE OF PARTENTAL RATING FOR CHANNEL \n");
+		}
 		else
 		{
 			printf("Unknown key value: %s\n", key);
